@@ -9,7 +9,27 @@
 import UIKit
 
 class ChannelVC: UIViewController {
-
+    
+    //MAKE: Outlets
+    @IBOutlet weak var Login_Button: UIButton!
+    
+    
+    
+    
+    @IBAction func LoginBtn_Action(_ sender: UIButton) {
+        
+        
+        performSegue(withIdentifier: "toLogin_segue", sender: nil)
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 

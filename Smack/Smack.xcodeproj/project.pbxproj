@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B6548C977A821F5665B28B7D /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA23BB44A729EAEE57AD764C /* Pods_Smack.framework */; };
 		BB77263A200132210023573C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB772639200132210023573C /* GradientView.swift */; };
+		BB84C7E720028F6E00332539 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB84C7E620028F6E00332539 /* LoginVC.swift */; };
 		BBB8B3A41FFE6F66002C53CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB8B3A31FFE6F66002C53CA /* AppDelegate.swift */; };
 		BBB8B3A91FFE6F66002C53CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BBB8B3A71FFE6F66002C53CA /* Main.storyboard */; };
 		BBB8B3AB1FFE6F66002C53CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BBB8B3AA1FFE6F66002C53CA /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		932ED0DBB61B95985B6DDA43 /* Pods-Smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.release.xcconfig"; sourceTree = "<group>"; };
 		BB772639200132210023573C /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		BB84C7E620028F6E00332539 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		BBB8B3A01FFE6F66002C53CA /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBB8B3A31FFE6F66002C53CA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BBB8B3A81FFE6F66002C53CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 			children = (
 				BBB8B3BF1FFE723F002C53CA /* ChatVC.swift */,
 				BBB8B3C11FFE724E002C53CA /* ChannelVC.swift */,
+				BB84C7E620028F6E00332539 /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			files = (
 				BBB8B3C01FFE723F002C53CA /* ChatVC.swift in Sources */,
 				BBB8B3A41FFE6F66002C53CA /* AppDelegate.swift in Sources */,
+				BB84C7E720028F6E00332539 /* LoginVC.swift in Sources */,
 				BB77263A200132210023573C /* GradientView.swift in Sources */,
 				BBB8B3BB1FFE71A2002C53CA /* SWRevealViewController.m in Sources */,
 				BBB8B3C21FFE724E002C53CA /* ChannelVC.swift in Sources */,
