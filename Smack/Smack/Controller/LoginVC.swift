@@ -16,10 +16,16 @@ class LoginVC: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    
+    //MARK: Actions
     @IBAction func LoginCloseBtn_Action(_ sender: UIButton) {
         
         dismiss(animated: true, completion: nil)
     }
     
-
+    @IBAction func CreateAccount_Action(_ sender: UIButton) {
+        
+       performSegue(withIdentifier: TO_CREATE_ACCOUNT, sender: nil)
+    }
+    
 }

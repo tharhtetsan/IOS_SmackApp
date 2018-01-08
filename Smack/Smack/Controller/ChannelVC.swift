@@ -10,16 +10,15 @@ import UIKit
 
 class ChannelVC: UIViewController {
     
-    //MAKE: Outlets
+    //MARK: Outlets
     @IBOutlet weak var Login_Button: UIButton!
+    @IBAction func prepareForUnwin(Segue: UIStoryboardSegue){
     
-    
-    
-    
+    }
     @IBAction func LoginBtn_Action(_ sender: UIButton) {
         
         
-        performSegue(withIdentifier: "toLogin_segue", sender: nil)
+        performSegue(withIdentifier: TO_LOG_IN, sender: nil)
     }
     
     
