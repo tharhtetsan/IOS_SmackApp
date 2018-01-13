@@ -47,7 +47,7 @@ class AuthService{
         let lowerCaseEmail = email.lowercased()
         
         let header = [
-            "Content-type":"application/json ; charset = utf-8"
+            "Content-type":"application/json; charset = utf-8"
         ]
         
         let body : [String : Any] = [
