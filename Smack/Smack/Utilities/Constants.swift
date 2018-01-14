@@ -21,6 +21,9 @@ let HEADER = [
 ]
 
 
+//Colors
+let SmaclPlaceHolderColor = #colorLiteral(red: 0.2588235294, green: 0.3294117647, blue: 0.7254901961, alpha: 0.5)
+
 
 //MARK: Segues
 let TO_LOG_IN = "toLogin_segue"

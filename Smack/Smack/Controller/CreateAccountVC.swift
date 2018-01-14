@@ -19,15 +19,18 @@ class CreateAccountVC: UIViewController {
     
     @IBOutlet weak var userImage_ImageView: UIImageView!
     
+    @IBOutlet weak var spinnner: UIActivityIndicatorView!
     
     
     //MARK : Vaiables
     var avatarName = "profileDefault"
     var avatarColor = "[0.5,0.5,0.5,1]"
-    
+    var bgColor : UIColor!
     
 
     @IBAction func Btn_CreateAccount_Pressed(_ sender: Any) {
+        spinnner.isHidden = false
+        spinnner.startAnimating()
         
         guard let name = userName_textField.text,userName_textField.text != "" else {return}
         guard let email = email_textField.text ,email_textField.text != "" else {return}
@@ -43,6 +46,9 @@ class CreateAccountVC: UIViewController {
                         AuthService.instance.CreateUser(name: name, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
                             
                             if success {
+                               
+                                self.spinnner.isHidden = true
+                                self.spinnner.stopAnimating()
                                 self.performSegue(withIdentifier: UNWIN, sender: nil)
                             }
                         })
@@ -56,12 +62,24 @@ class CreateAccountVC: UIViewController {
         performSegue(withIdentifier: TO_AAVATAR_PICKER, sender: nil)
     }
     @IBAction func Btn_GenerateRGBcolor_pressed(_ sender: Any) {
+        let r = CGFloat(arc4random_uniform(255))/255
+        let g = CGFloat(arc4random_uniform(255))/255
+        let b = CGFloat(arc4random_uniform(255))/255
+        
+        
+        bgColor = UIColor(red: r, green: g, blue: b, alpha: 1)
+        UIView.animate(withDuration: 0.2)
+        {
+            self.userImage_ImageView.backgroundColor = self.bgColor
+        }
+        
     }
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        SetUpView()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -69,11 +87,31 @@ class CreateAccountVC: UIViewController {
             {
                 userImage_ImageView.image = UIImage(named : UserDataService.instance.avtarName)
                 avatarName = UserDataService.instance.avtarName
+                
+                if avatarName.contains("light") && bgColor == nil {
+                    userImage_ImageView.backgroundColor = UIColor.lightGray
+                }
         }
     }
 
     @IBAction func closePressBtn_Action(_ sender: UIButton) {
         performSegue(withIdentifier: UNWIN, sender: nil)
+    }
+    
+    func SetUpView()
+    {
+        userName_textField.attributedPlaceholder = NSAttributedString(string : "username",attributes : [NSAttributedStringKey.foregroundColor : SmaclPlaceHolderColor])
+        email_textField.attributedPlaceholder = NSAttributedString(string : "email",attributes : [NSAttributedStringKey.foregroundColor : SmaclPlaceHolderColor])
+        password_textField.attributedPlaceholder = NSAttributedString(string : "password",attributes : [NSAttributedStringKey.foregroundColor : SmaclPlaceHolderColor])
+        
+
+        let tap = UITapGestureRecognizer(target : self , action : #selector(handleTap))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func  handleTap()
+    {
+        view.endEditing(true)
     }
     
 
