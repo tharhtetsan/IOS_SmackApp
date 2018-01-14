@@ -53,6 +53,7 @@ class CreateAccountVC: UIViewController {
         
     }
     @IBAction func Btn_ChooseAvatuar_Pressed(_ sender: Any) {
+        performSegue(withIdentifier: TO_AAVATAR_PICKER, sender: nil)
     }
     @IBAction func Btn_GenerateRGBcolor_pressed(_ sender: Any) {
     }
@@ -61,8 +62,14 @@ class CreateAccountVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+            if UserDataService.instance.avtarName != ""
+            {
+                userImage_ImageView.image = UIImage(named : UserDataService.instance.avtarName)
+                avatarName = UserDataService.instance.avtarName
+        }
     }
 
     @IBAction func closePressBtn_Action(_ sender: UIButton) {

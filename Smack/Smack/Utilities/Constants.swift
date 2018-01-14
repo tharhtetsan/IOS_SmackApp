@@ -10,7 +10,7 @@ import Foundation
 
 typealias ComplectionHandle = (_ Success : Bool )->()
 
-//URL Constant
+//MARK: URL Constant
 let BASE_URL = "http://localhost:3005/v1/"
 let URL_REGISTER = "\(BASE_URL)account/register"
 let URL_LOGIN = "\(BASE_URL)account/login"
@@ -20,11 +20,13 @@ let HEADER = [
     "Content-type":"application/json; charset = utf-8"
 ]
 
+
+
 //MARK: Segues
 let TO_LOG_IN = "toLogin_segue"
 let TO_CREATE_ACCOUNT = "toCreateAccount_segue"
 let UNWIN = "unwinToChannel"
-
+let TO_AAVATAR_PICKER = "ToAvatarPicker"
 
 
 //MARK:user defaults
