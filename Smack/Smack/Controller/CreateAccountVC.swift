@@ -10,7 +10,7 @@ import UIKit
 
 class CreateAccountVC: UIViewController {
 
-    
+    //MARK : Outlets
     @IBOutlet weak var userName_textField: UITextField!
     
     @IBOutlet weak var email_textField: UITextField!
@@ -20,19 +20,32 @@ class CreateAccountVC: UIViewController {
     @IBOutlet weak var userImage_ImageView: UIImageView!
     
     
+    
+    //MARK : Vaiables
+    var avatarName = "profileDefault"
+    var avatarColor = "[0.5,0.5,0.5,1]"
+    
+    
 
     @IBAction func Btn_CreateAccount_Pressed(_ sender: Any) {
         
+        guard let name = userName_textField.text,userName_textField.text != "" else {return}
         guard let email = email_textField.text ,email_textField.text != "" else {return}
-        
         guard let password = password_textField.text ,password_textField.text != "" else {return}
+        
+        
         AuthService.instance.registerUSEr(email: email, password: password) { (success) in
             
             if(success)
             {
                 AuthService.instance.loginUser(email: email, password: password, completion: { (success) in
                     if success {
-                        print("logged in user !",AuthService.instance.authToken)
+                        AuthService.instance.CreateUser(name: name, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: { (success) in
+                            
+                            if success {
+                                self.performSegue(withIdentifier: UNWIN, sender: nil)
+                            }
+                        })
                     }
                 })
             }
