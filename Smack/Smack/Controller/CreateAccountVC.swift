@@ -51,7 +51,7 @@ class CreateAccountVC: UIViewController {
                                 self.spinnner.stopAnimating()
                                 self.performSegue(withIdentifier: UNWIN, sender: nil)
                                 NotificationCenter.default.post(name: NOTIF_USER_DATA_ADD_CHANGE, object: nil)
-                                AuthService.instance.isLoggedIn = true
+                                
                             }
                         })
                     }

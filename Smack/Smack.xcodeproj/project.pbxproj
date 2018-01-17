@@ -125,6 +125,7 @@
 		BBB8B3A21FFE6F66002C53CA /* Smack */ = {
 			isa = PBXGroup;
 			children = (
+				BBC6EA41200F055E008E3067 /* xibs */,
 				BB3E5C3A200A04380094EAE1 /* Services */,
 				BB09E58F2002F6F300F2184C /* Utilities */,
 				BBB8B3BE1FFE722D002C53CA /* View */,
@@ -159,7 +160,6 @@
 				BB09E58D2002F60600F2184C /* CreateAccountVC.swift */,
 				BB2D123B200B55C300C039AE /* AvatarPickerVC.swift */,
 				BBC6EA3D200EFF4A008E3067 /* ProfileVC.swift */,
-				BBC6EA3E200EFF4A008E3067 /* ProfileVC.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -180,6 +180,14 @@
 				BB2D1242200BB93800C039AE /* CircleImage.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		BBC6EA41200F055E008E3067 /* xibs */ = {
+			isa = PBXGroup;
+			children = (
+				BBC6EA3E200EFF4A008E3067 /* ProfileVC.xib */,
+			);
+			path = xibs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
