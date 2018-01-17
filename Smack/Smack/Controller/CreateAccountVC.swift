@@ -50,6 +50,8 @@ class CreateAccountVC: UIViewController {
                                 self.spinnner.isHidden = true
                                 self.spinnner.stopAnimating()
                                 self.performSegue(withIdentifier: UNWIN, sender: nil)
+                                NotificationCenter.default.post(name: NOTIF_USER_DATA_ADD_CHANGE, object: nil)
+                                AuthService.instance.isLoggedIn = true
                             }
                         })
                     }
@@ -68,6 +70,7 @@ class CreateAccountVC: UIViewController {
         
         
         bgColor = UIColor(red: r, green: g, blue: b, alpha: 1)
+        avatarColor = "[\(r), \(g), \(b),1]"
         UIView.animate(withDuration: 0.2)
         {
             self.userImage_ImageView.backgroundColor = self.bgColor
