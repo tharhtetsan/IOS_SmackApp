@@ -20,7 +20,11 @@ class ChatVC: UIViewController {
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
         
-        // Do any additional setup after loading the view.
+        
+        MessageServices.instance.findAllChannel { (success) in
+            
+        }
+      
     }
 
 
