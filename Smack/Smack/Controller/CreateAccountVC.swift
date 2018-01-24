@@ -103,9 +103,9 @@ class CreateAccountVC: UIViewController {
     
     func SetUpView()
     {
-        userName_textField.attributedPlaceholder = NSAttributedString(string : "username",attributes : [NSAttributedStringKey.foregroundColor : SmaclPlaceHolderColor])
-        email_textField.attributedPlaceholder = NSAttributedString(string : "email",attributes : [NSAttributedStringKey.foregroundColor : SmaclPlaceHolderColor])
-        password_textField.attributedPlaceholder = NSAttributedString(string : "password",attributes : [NSAttributedStringKey.foregroundColor : SmaclPlaceHolderColor])
+        userName_textField.attributedPlaceholder = NSAttributedString(string : "username",attributes : [NSAttributedStringKey.foregroundColor : SmackPlaceHolderColor])
+        email_textField.attributedPlaceholder = NSAttributedString(string : "email",attributes : [NSAttributedStringKey.foregroundColor : SmackPlaceHolderColor])
+        password_textField.attributedPlaceholder = NSAttributedString(string : "password",attributes : [NSAttributedStringKey.foregroundColor : SmackPlaceHolderColor])
         
 
         let tap = UITapGestureRecognizer(target : self , action : #selector(handleTap))

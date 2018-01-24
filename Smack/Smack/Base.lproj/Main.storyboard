@@ -75,12 +75,13 @@
                                     <action selector="LoginBtn_Action:" destination="P1f-Up-zc7" eventType="touchUpInside" id="3pX-n2-FMO"/>
                                 </connections>
                             </button>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mXk-3f-mXM">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mXk-3f-mXM">
                                 <rect key="frame" x="5" y="116" width="365" height="435"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="435" id="wa4-9q-x6l"/>
                                 </constraints>
+                                <color key="separatorColor" red="0.75406885150000003" green="0.75408679249999999" blue="0.75407713649999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="channelCell" id="kNT-Zq-y5A" customClass="ChannelCell" customModule="Smack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="365" height="44"/>
@@ -110,12 +111,15 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2yg-1y-EVN">
-                                <rect key="frame" x="111" y="603" width="159" height="34"/>
+                                <rect key="frame" x="244" y="80.5" width="51" height="37"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="159" id="b1V-qg-YJR"/>
-                                    <constraint firstAttribute="height" constant="34" id="zJh-DG-f9y"/>
+                                    <constraint firstAttribute="width" constant="51" id="Wg6-az-LVi"/>
+                                    <constraint firstAttribute="height" constant="37" id="taH-JX-DlB"/>
                                 </constraints>
                                 <state key="normal" image="addChannelButton"/>
+                                <connections>
+                                    <action selector="AddChannels:" destination="P1f-Up-zc7" eventType="touchUpInside" id="1Nc-hi-8qV"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -124,14 +128,14 @@
                             <constraint firstItem="qDJ-fZ-o8G" firstAttribute="top" secondItem="yY3-jR-JwY" secondAttribute="top" constant="24" id="BNS-Jj-7qR"/>
                             <constraint firstItem="yY3-jR-JwY" firstAttribute="bottom" secondItem="F9k-Ce-aXE" secondAttribute="bottom" constant="20" id="CrP-dK-myZ"/>
                             <constraint firstItem="qDJ-fZ-o8G" firstAttribute="leading" secondItem="yY3-jR-JwY" secondAttribute="leading" constant="16" id="Lcr-w7-Hmo"/>
-                            <constraint firstItem="2yg-1y-EVN" firstAttribute="leading" secondItem="F9k-Ce-aXE" secondAttribute="trailing" constant="20" id="RIs-Es-Uyx"/>
-                            <constraint firstItem="yY3-jR-JwY" firstAttribute="bottom" secondItem="2yg-1y-EVN" secondAttribute="bottom" constant="30" id="Rad-vu-JxM"/>
+                            <constraint firstItem="yY3-jR-JwY" firstAttribute="trailing" secondItem="2yg-1y-EVN" secondAttribute="trailing" constant="80" id="Lr4-47-bP9"/>
                             <constraint firstItem="F9k-Ce-aXE" firstAttribute="leading" secondItem="yY3-jR-JwY" secondAttribute="leading" constant="16" id="SW0-dH-yVQ"/>
                             <constraint firstItem="yY3-jR-JwY" firstAttribute="bottom" secondItem="Yh9-ED-hDE" secondAttribute="bottom" constant="41" id="VCP-yb-8zn"/>
                             <constraint firstItem="mXk-3f-mXM" firstAttribute="centerY" secondItem="Vi7-FM-hQi" secondAttribute="centerY" id="Vet-Aw-jH3"/>
                             <constraint firstItem="L7h-zT-0NC" firstAttribute="top" secondItem="qDJ-fZ-o8G" secondAttribute="bottom" constant="20" id="Y24-pL-vua"/>
                             <constraint firstItem="Yh9-ED-hDE" firstAttribute="leading" secondItem="F9k-Ce-aXE" secondAttribute="trailing" constant="45" id="gl8-XM-bZd"/>
                             <constraint firstItem="L7h-zT-0NC" firstAttribute="leading" secondItem="yY3-jR-JwY" secondAttribute="leading" constant="16" id="hHo-FO-a0V"/>
+                            <constraint firstItem="2yg-1y-EVN" firstAttribute="baseline" secondItem="L7h-zT-0NC" secondAttribute="baseline" id="hf9-ic-cZU"/>
                             <constraint firstItem="mXk-3f-mXM" firstAttribute="leading" secondItem="yY3-jR-JwY" secondAttribute="leading" constant="5" id="piI-JB-ydx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="yY3-jR-JwY"/>
@@ -145,7 +149,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4g-cy-zvX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1001" y="-162"/>
+            <point key="canvasLocation" x="1000.8" y="-162.3688155922039"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="ytO-ZB-7Tc">

@@ -19,6 +19,8 @@
 		BB306C8D2013A3D90066BF7D /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB306C8C2013A3D90066BF7D /* ChannelCell.swift */; };
 		BB3E5C39200A042A0094EAE1 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3E5C38200A042A0094EAE1 /* AuthService.swift */; };
 		BB3E5C3E200A20800094EAE1 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3E5C3D200A20800094EAE1 /* RoundedButton.swift */; };
+		BB57B3D92018E387006DF513 /* AddChannelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB57B3D72018E387006DF513 /* AddChannelsViewController.swift */; };
+		BB57B3DA2018E387006DF513 /* AddChannelsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB57B3D82018E387006DF513 /* AddChannelsViewController.xib */; };
 		BB77263A200132210023573C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB772639200132210023573C /* GradientView.swift */; };
 		BB84C7E720028F6E00332539 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB84C7E620028F6E00332539 /* LoginVC.swift */; };
 		BBB8B3A41FFE6F66002C53CA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBB8B3A31FFE6F66002C53CA /* AppDelegate.swift */; };
@@ -45,6 +47,8 @@
 		BB306C8C2013A3D90066BF7D /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		BB3E5C38200A042A0094EAE1 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		BB3E5C3D200A20800094EAE1 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		BB57B3D72018E387006DF513 /* AddChannelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelsViewController.swift; sourceTree = "<group>"; };
+		BB57B3D82018E387006DF513 /* AddChannelsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelsViewController.xib; sourceTree = "<group>"; };
 		BB772639200132210023573C /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		BB84C7E620028F6E00332539 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		BBB8B3A01FFE6F66002C53CA /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +171,7 @@
 				BB09E58D2002F60600F2184C /* CreateAccountVC.swift */,
 				BB2D123B200B55C300C039AE /* AvatarPickerVC.swift */,
 				BBC6EA3D200EFF4A008E3067 /* ProfileVC.swift */,
+				BB57B3D72018E387006DF513 /* AddChannelsViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				BBC6EA3E200EFF4A008E3067 /* ProfileVC.xib */,
+				BB57B3D82018E387006DF513 /* AddChannelsViewController.xib */,
 			);
 			path = xibs;
 			sourceTree = "<group>";
@@ -262,6 +268,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB57B3DA2018E387006DF513 /* AddChannelsViewController.xib in Resources */,
 				BBC6EA40200EFF4A008E3067 /* ProfileVC.xib in Resources */,
 				BBB8B3AE1FFE6F66002C53CA /* LaunchScreen.storyboard in Resources */,
 				BBB8B3AB1FFE6F66002C53CA /* Assets.xcassets in Resources */,
@@ -333,6 +340,7 @@
 				BB2D1243200BB93800C039AE /* CircleImage.swift in Sources */,
 				BBB8B3A41FFE6F66002C53CA /* AppDelegate.swift in Sources */,
 				BB2D1238200B433000C039AE /* UserDataService.swift in Sources */,
+				BB57B3D92018E387006DF513 /* AddChannelsViewController.swift in Sources */,
 				BB84C7E720028F6E00332539 /* LoginVC.swift in Sources */,
 				BB3E5C39200A042A0094EAE1 /* AuthService.swift in Sources */,
 				BB306C89201364530066BF7D /* MessageServices.swift in Sources */,
