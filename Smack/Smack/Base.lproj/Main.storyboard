@@ -201,6 +201,9 @@
                                         <real key="value" value="5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="LoginInAction:" destination="WIu-8C-FFx" eventType="touchUpInside" id="01D-ea-Cnx"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yhl-QT-Oof">
                                 <rect key="frame" x="59" y="334" width="257" height="30"/>
@@ -257,6 +260,10 @@
                                     </view>
                                 </subviews>
                             </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="gGF-S0-CQs">
+                                <rect key="frame" x="169" y="470" width="37" height="37"/>
+                                <color key="color" red="0.25882352939999997" green="0.3294117647" blue="0.72549019609999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -266,12 +273,17 @@
                             <constraint firstItem="JlA-WN-Kxd" firstAttribute="centerX" secondItem="F3H-C7-MUR" secondAttribute="centerX" id="Hfh-6H-wl1"/>
                             <constraint firstItem="Yhl-QT-Oof" firstAttribute="top" secondItem="YTh-hw-gLa" secondAttribute="bottom" constant="20" id="dKV-Rl-Hso"/>
                             <constraint firstItem="TUm-x3-uyg" firstAttribute="top" secondItem="1pL-Pn-kJe" secondAttribute="top" constant="40" id="hVI-Hk-sbz"/>
+                            <constraint firstItem="1pL-Pn-kJe" firstAttribute="bottom" secondItem="gGF-S0-CQs" secondAttribute="bottom" constant="160" id="kzF-cJ-tuF"/>
                             <constraint firstItem="JlA-WN-Kxd" firstAttribute="top" secondItem="TUm-x3-uyg" secondAttribute="bottom" constant="30" id="tmq-b2-xUE"/>
+                            <constraint firstItem="gGF-S0-CQs" firstAttribute="centerX" secondItem="F3H-C7-MUR" secondAttribute="centerX" id="vk6-Rq-SuV"/>
                             <constraint firstItem="YTh-hw-gLa" firstAttribute="top" secondItem="JlA-WN-Kxd" secondAttribute="bottom" constant="50" id="xUi-aK-haQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1pL-Pn-kJe"/>
                     </view>
                     <connections>
+                        <outlet property="emailTextField" destination="qG5-G3-Vsn" id="dKm-IE-8Qm"/>
+                        <outlet property="loginSpinner" destination="gGF-S0-CQs" id="GXd-XZ-ZFr"/>
+                        <outlet property="passwordTextFiedl" destination="Fwi-JE-v2G" id="qaY-vg-dOn"/>
                         <segue destination="ZHu-vI-8sM" kind="show" identifier="toCreateAccount_segue" id="1RM-Ce-0CA"/>
                     </connections>
                 </viewController>
@@ -589,6 +601,7 @@
                         <viewLayoutGuide key="safeArea" id="mC4-qN-JkH"/>
                     </view>
                     <connections>
+                        <outlet property="channelNamelb" destination="4Ld-c9-IR3" id="NkR-7P-Vu3"/>
                         <outlet property="menuBtn" destination="a9J-8O-rDL" id="oRu-7t-Yh4"/>
                     </connections>
                 </viewController>

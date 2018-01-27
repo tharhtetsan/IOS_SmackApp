@@ -26,7 +26,10 @@ class AuthService{
     
     var authToken : String{
         get{
-            return defaults.value(forKey: TOKEN_KEY) as! String
+            guard let token : String = defaults.value(forKey: TOKEN_KEY) as? String else {
+                return "token"
+            }
+            return token
         }
         set{
             defaults.set(newValue, forKey: TOKEN_KEY)
@@ -119,12 +122,9 @@ class AuthService{
                 
                     do{
                          let json = try  JSON(data : data)
-                        let id = json["_id"].stringValue
-                        let color = json["avatarColor"].stringValue
-                        let avatarName = json["avatarName"].stringValue
-                        let name = json["name"].stringValue
-                        
-                        UserDataService.instance.setUserData(id: id, Name: name, Email: email, color: color, avtarName: avatarName)
+                        guard let dataNew = response.data else{ return}
+                        self.setUserInfo(data: dataNew)
+                       
                         completion(true)
                         
                         
@@ -139,6 +139,43 @@ class AuthService{
             }
         }
     }
+    
+    
+    func findUserByEmail(complection :@escaping ComplectionHandle)
+    {
+        Alamofire.request("\(URL_USER_BY_EMAIL)\(userEmail)", method: .get, parameters: nil, encoding: JSONEncoding.default, headers: BEARER_HEADER).responseJSON{ (response) in
+            
+            if response.result.error == nil{
+                guard let dataNew = response.data else{ return}
+                self.setUserInfo(data: dataNew)
+                    complection(true)
+                
+            }
+            else
+            {
+                complection(false)
+                debugPrint(response.result.error as Any)
+            }
+            
+        }
+    }
+    
+    func setUserInfo(data : Data)
+    {   do{
+        let json = try JSON(data : data)
+        let id = json["_id"].stringValue
+        let color = json["avatarColor"].stringValue
+        let avatorName = json["avatarName"].stringValue
+        let email = json["email"].stringValue
+        let name = json["name"].stringValue
+        
+    
+        UserDataService.instance.setUserData(id: id, Name: name, Email: email, color: color, avtarName: avatorName)
+    }catch{
+        
+        }
+    }
+ 
   
     
     

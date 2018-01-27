@@ -19,6 +19,7 @@
 		BB306C8D2013A3D90066BF7D /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB306C8C2013A3D90066BF7D /* ChannelCell.swift */; };
 		BB3E5C39200A042A0094EAE1 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3E5C38200A042A0094EAE1 /* AuthService.swift */; };
 		BB3E5C3E200A20800094EAE1 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3E5C3D200A20800094EAE1 /* RoundedButton.swift */; };
+		BB4CBD04201C65C200306DCF /* SocketServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4CBD03201C65C200306DCF /* SocketServices.swift */; };
 		BB57B3D92018E387006DF513 /* AddChannelsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB57B3D72018E387006DF513 /* AddChannelsViewController.swift */; };
 		BB57B3DA2018E387006DF513 /* AddChannelsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB57B3D82018E387006DF513 /* AddChannelsViewController.xib */; };
 		BB77263A200132210023573C /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB772639200132210023573C /* GradientView.swift */; };
@@ -47,6 +48,7 @@
 		BB306C8C2013A3D90066BF7D /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		BB3E5C38200A042A0094EAE1 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		BB3E5C3D200A20800094EAE1 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		BB4CBD03201C65C200306DCF /* SocketServices.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SocketServices.swift; sourceTree = "<group>"; };
 		BB57B3D72018E387006DF513 /* AddChannelsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelsViewController.swift; sourceTree = "<group>"; };
 		BB57B3D82018E387006DF513 /* AddChannelsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddChannelsViewController.xib; sourceTree = "<group>"; };
 		BB772639200132210023573C /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 		BB3E5C3A200A04380094EAE1 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				BB4CBD03201C65C200306DCF /* SocketServices.swift */,
 				BB3E5C38200A042A0094EAE1 /* AuthService.swift */,
 				BB2D1237200B433000C039AE /* UserDataService.swift */,
 				BB306C88201364530066BF7D /* MessageServices.swift */,
@@ -331,6 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB4CBD04201C65C200306DCF /* SocketServices.swift in Sources */,
 				BBC6EA3F200EFF4A008E3067 /* ProfileVC.swift in Sources */,
 				BB306C8D2013A3D90066BF7D /* ChannelCell.swift in Sources */,
 				BBB8B3C01FFE723F002C53CA /* ChatVC.swift in Sources */,
