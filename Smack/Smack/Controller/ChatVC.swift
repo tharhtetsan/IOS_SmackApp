@@ -12,11 +12,14 @@ class ChatVC: UIViewController {
 
     @IBOutlet weak var menuBtn: UIButton!
   
+    @IBOutlet weak var messageTextBot: UITextField!
     @IBOutlet weak var channelNamelb: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        view.bindToKeyboard()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap))
+        view.addGestureRecognizer(tap)
         menuBtn.addTarget(self.revealViewController(), action: #selector(SWRevealViewController.revealToggle(_:)), for: .touchUpInside)
         self.view.addGestureRecognizer(self.revealViewController().panGestureRecognizer())
         self.view.addGestureRecognizer(self.revealViewController().tapGestureRecognizer())
@@ -50,6 +53,10 @@ class ChatVC: UIViewController {
     {
         updateWithChannel()
     }
+    @objc func handleTap()
+    {
+        view.endEditing(true)
+    }
     
     func updateWithChannel()
     {
@@ -58,6 +65,21 @@ class ChatVC: UIViewController {
     }
     
     
+    @IBAction func SendMessageBtnPress(_ sender: Any) {
+        
+        if AuthService.instance.isLoggedIn{
+            guard let channelId = MessageServices.instance.SelectedChannel?.id else {return}
+            guard let messageBody = messageTextBot.text else  {return }
+            SocketServices.instance.addMessage(messageBody: messageBody, userId: UserDataService.instance.id, channelId: channelId, completion: { (success) in
+                if success{
+                    self.messageTextBot.text = ""
+                    self.messageTextBot.resignFirstResponder()
+                }
+                
+            })
+        }
+        
+    }
     
     func onLoginGetMessages()
     {

@@ -590,19 +590,45 @@
                                     <constraint firstItem="4Ld-c9-IR3" firstAttribute="centerX" secondItem="Mev-An-3eU" secondAttribute="centerX" id="egL-Qk-Oec"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message : " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VM0-Dd-qKU">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="BSO-UJ-LbQ"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XoR-f7-Df8">
+                                <rect key="frame" x="340" y="632" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="BL8-i6-0so"/>
+                                    <constraint firstAttribute="height" constant="30" id="h9L-Mv-C4U"/>
+                                </constraints>
+                                <state key="normal" image="send"/>
+                                <connections>
+                                    <action selector="SendMessageBtnPress:" destination="dd1-VY-bDh" eventType="touchUpInside" id="TL4-5P-8F6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Mev-An-3eU" firstAttribute="top" secondItem="EFa-2J-bvp" secondAttribute="top" id="8Zu-hi-m7l"/>
+                            <constraint firstItem="VM0-Dd-qKU" firstAttribute="bottom" secondItem="mC4-qN-JkH" secondAttribute="bottom" id="Lvq-gZ-2h4"/>
                             <constraint firstItem="Mev-An-3eU" firstAttribute="centerX" secondItem="EFa-2J-bvp" secondAttribute="centerX" id="QXF-Gu-cDL"/>
                             <constraint firstItem="Mev-An-3eU" firstAttribute="trailing" secondItem="mC4-qN-JkH" secondAttribute="trailing" id="RC3-TZ-W6a"/>
+                            <constraint firstItem="VM0-Dd-qKU" firstAttribute="leading" secondItem="mC4-qN-JkH" secondAttribute="leading" id="bYY-A6-rda"/>
+                            <constraint firstItem="XoR-f7-Df8" firstAttribute="centerY" secondItem="VM0-Dd-qKU" secondAttribute="centerY" id="eBg-dv-b4t"/>
+                            <constraint firstItem="mC4-qN-JkH" firstAttribute="trailing" secondItem="XoR-f7-Df8" secondAttribute="trailing" constant="5" id="ing-QA-gDf"/>
                             <constraint firstItem="Mev-An-3eU" firstAttribute="leading" secondItem="mC4-qN-JkH" secondAttribute="leading" id="pS7-8p-Ooy"/>
+                            <constraint firstItem="mC4-qN-JkH" firstAttribute="trailing" secondItem="VM0-Dd-qKU" secondAttribute="trailing" id="suF-gF-gtt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mC4-qN-JkH"/>
                     </view>
                     <connections>
                         <outlet property="channelNamelb" destination="4Ld-c9-IR3" id="NkR-7P-Vu3"/>
                         <outlet property="menuBtn" destination="a9J-8O-rDL" id="oRu-7t-Yh4"/>
+                        <outlet property="messageTextBot" destination="VM0-Dd-qKU" id="EZn-3j-QX3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="big-qR-Shw" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -613,6 +639,7 @@
     <resources>
         <image name="addChannelButton" width="22" height="22"/>
         <image name="closeButton" width="28" height="28"/>
+        <image name="send" width="30" height="30"/>
         <image name="smackBack" width="28" height="28"/>
         <image name="smackBurger" width="40" height="40"/>
         <image name="smackLogo" width="48" height="40"/>
