@@ -10,6 +10,7 @@
 		B6548C977A821F5665B28B7D /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA23BB44A729EAEE57AD764C /* Pods_Smack.framework */; };
 		BB09E58E2002F60600F2184C /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB09E58D2002F60600F2184C /* CreateAccountVC.swift */; };
 		BB09E5912002F70900F2184C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB09E5902002F70900F2184C /* Constants.swift */; };
+		BB11BF152020CDC400C4113B /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB11BF142020CDC400C4113B /* MessageCell.swift */; };
 		BB2D1238200B433000C039AE /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2D1237200B433000C039AE /* UserDataService.swift */; };
 		BB2D123C200B55C300C039AE /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2D123B200B55C300C039AE /* AvatarPickerVC.swift */; };
 		BB2D123E200B596400C039AE /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2D123D200B596400C039AE /* AvatarCell.swift */; };
@@ -41,6 +42,7 @@
 		932ED0DBB61B95985B6DDA43 /* Pods-Smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.release.xcconfig"; sourceTree = "<group>"; };
 		BB09E58D2002F60600F2184C /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		BB09E5902002F70900F2184C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		BB11BF142020CDC400C4113B /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		BB2D1237200B433000C039AE /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		BB2D123B200B55C300C039AE /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		BB2D123D200B596400C039AE /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				BB2D123D200B596400C039AE /* AvatarCell.swift */,
 				BB2D1242200BB93800C039AE /* CircleImage.swift */,
 				BB306C8C2013A3D90066BF7D /* ChannelCell.swift */,
+				BB11BF142020CDC400C4113B /* MessageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 				BB306C8D2013A3D90066BF7D /* ChannelCell.swift in Sources */,
 				BBB8B3C01FFE723F002C53CA /* ChatVC.swift in Sources */,
 				BB2D123C200B55C300C039AE /* AvatarPickerVC.swift in Sources */,
+				BB11BF152020CDC400C4113B /* MessageCell.swift in Sources */,
 				BB3E5C3E200A20800094EAE1 /* RoundedButton.swift in Sources */,
 				BB389673201CE18C00CCA9BF /* Message.swift in Sources */,
 				BB306C8B2013646A0066BF7D /* Channel.swift in Sources */,
